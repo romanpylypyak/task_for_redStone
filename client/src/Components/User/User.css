@@ -1,0 +1,10 @@
+.postsWrapper > div{
+    border: 1px solid black;
+    width: 90%;
+    margin: 0 auto 10px auto;
+}
+
+
+.postDiv p:first-of-type { 
+    font-weight: bold;
+}

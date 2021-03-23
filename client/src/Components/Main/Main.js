@@ -37,6 +37,8 @@ class Main extends React.Component {
                 })
             }
             else if(res.user["user role"] === "user"){
+                localStorage.clear()
+                localStorage.setItem("user", res.user.name)
                 this.props.history.push({
                     pathname: '/user',
                     state: { data: res }

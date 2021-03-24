@@ -1,0 +1,10 @@
+{{# each rows as |val key|}}
+<div class="postDiv postNumber{{math @key "+" 1}}">
+<p> {{ val.postHeader }}</p>
+<p>{{ val.postText }}</p> 
+</div>
+{{/each}}
+
+
+
+

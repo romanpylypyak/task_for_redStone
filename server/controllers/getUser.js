@@ -5,8 +5,6 @@ const mysql = require("mysql2/promise");
 const config = require("../config/DBConfig");
 const bCrypt = require("bcrypt")
 
-
-
 module.exports = async (req,res) => {
     let data = req.body;
     const conn = await mysql.createConnection(config);

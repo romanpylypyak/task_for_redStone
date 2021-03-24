@@ -13,9 +13,14 @@ module.exports = async (req,res) => {
       if(!rows.length){
         return res.status(400).send("no Data");
       } else {
-        let resData = JSON.stringify(rows)
-        res.setHeader("Content-type", 'text/plain')
-        res.status(200).send(resData) 
+        if(req.url === "/user"){
+          let resData = JSON.stringify(rows)
+          res.setHeader("Content-type", 'text/plain')
+          res.status(200).send(resData)
+        }
+       else if(req.url === "/api/user"){
+        res.render('index', { rows: rows });
+       }
       } 
     } catch (error) {
       return res.status(500).send("Error, data of this user posts is undefined!")

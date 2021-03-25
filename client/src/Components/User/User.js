@@ -14,7 +14,7 @@ class User extends React.Component {
     let data = {
     "name": localStorage.getItem("user")
     }
-    fetch('http://localhost:5000/user', {
+    fetch('http://localhost:5000/api/user', {
     method: "POST",
     headers: {
         "Content-Type": "application/json",

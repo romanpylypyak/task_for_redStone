@@ -3,6 +3,7 @@ const app = express();
 app.use(express.json());
 const mysql = require("mysql2/promise");
 const config = require("../config/DBConfig");
+//const config = require("../commander.js");
 const bCrypt = require("bcrypt")
 
 module.exports = async (req,res) => {

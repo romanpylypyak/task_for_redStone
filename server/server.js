@@ -13,18 +13,12 @@ app.engine('hbs', hbs({extname: 'hbs', defaultLayout: 'layout', layoutsDir: __di
       rvalue = parseFloat(rvalue);
       return {
           "+": lvalue + rvalue,
-          "-": lvalue - rvalue,
-          "*": lvalue * rvalue,
-          "/": lvalue / rvalue,
-          "%": lvalue % rvalue
       }[operator];
   }
-}}));
+}
+}));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
-
-
-
 
 
 app.post("/", getUser)
